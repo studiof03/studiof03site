@@ -1,0 +1,10 @@
+# Variáveis para desenvolvimento local (wrangler dev).
+# Copie este arquivo para ".dev.vars" e preencha. NUNCA suba .dev.vars ao Git.
+
+RESEND_API_KEY="re_xxxxxxxxxxxxxxxxxxxx"
+TO_EMAIL="contato@studiof03.com"
+FROM_EMAIL="no-reply@studiof03.com"
+ALLOWED_ORIGIN="http://localhost:8787,https://www.studiof03.com"
+
+# Opcional — só se for usar o captcha Cloudflare Turnstile:
+# TURNSTILE_SECRET="0x4xxxxxxxxxxxxxxxxxxx"

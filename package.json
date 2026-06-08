@@ -1,0 +1,13 @@
+{
+  "name": "studiof03-contact",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Back-end do formulário de contato do site STUDIO F03 (Cloudflare Worker)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

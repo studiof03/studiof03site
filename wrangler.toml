@@ -1,0 +1,27 @@
+name = "studiof03-contact"
+main = "src/worker.js"
+compatibility_date = "2024-11-01"
+
+# Rota personalizada (opcional): liga o Worker a api.studiof03.com.
+# Requer o domínio studiof03.com adicionado à sua conta Cloudflare.
+# routes = [
+#   { pattern = "api.studiof03.com/api/contact", custom_domain = true }
+# ]
+
+# Rate-limit por IP (opcional): crie um KV namespace e cole o id aqui.
+#   npx wrangler kv namespace create RATE_LIMIT
+# [[kv_namespaces]]
+# binding = "RATE_LIMIT"
+# id = "COLE_O_ID_AQUI"
+
+# ──────────────────────────────────────────────────────────────
+# SECRETS — NÃO coloque valores reais aqui. Configure assim:
+#   npx wrangler secret put RESEND_API_KEY
+#   npx wrangler secret put TURNSTILE_SECRET   (opcional)
+# Variáveis não-secretas podem ficar em [vars] abaixo:
+# ──────────────────────────────────────────────────────────────
+[vars]
+TO_EMAIL = "contato@studiof03.com"
+FROM_EMAIL = "no-reply@studiof03.com"
+# Origens liberadas no CORS, separadas por vírgula (com e sem www).
+ALLOWED_ORIGIN = "https://www.studiof03.com,https://studiof03.com"

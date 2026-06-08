@@ -1,0 +1,18 @@
+# Dependências (não precisam ir pro repositório)
+node_modules/
+
+# Segredos — NUNCA subir chaves de API
+.dev.vars
+.env
+*.local
+
+# Cache e estado do Wrangler
+.wrangler/
+
+# Backup das imagens originais pesadas (não precisa no site publicado)
+renders-originais/
+renders-web/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

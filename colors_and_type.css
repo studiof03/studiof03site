@@ -1,0 +1,240 @@
+/* ============================================================
+   STUDIO F03 — Foundations: Color + Type
+   Archviz studio · Real estate · "modern, yet trustworthy"
+   ============================================================ */
+
+/* ---------- FONTS ---------- */
+/* Titles — Lemon Milk (geometric, all-caps, perfect-circle O) */
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("fonts/LemonMilk-Light.otf") format("opentype");
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("fonts/LemonMilk-Regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("fonts/LemonMilk-Medium.otf") format("opentype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("fonts/LemonMilk-Bold.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* Body — Futura Bk BT (Book) */
+@font-face {
+  font-family: "Futura Bk BT";
+  src: url("fonts/FuturaBkBT-Book.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Futura Bk BT";
+  src: url("fonts/FuturaBkBT-BookItalic.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+
+/* Subheads / topics — Futura Md BT (Medium + Bold) */
+@font-face {
+  font-family: "Futura Md BT";
+  src: url("fonts/FuturaMdBT-Medium.ttf") format("truetype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Futura Md BT";
+  src: url("fonts/FuturaMdBT-MediumItalic.ttf") format("truetype");
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Futura Md BT";
+  src: url("fonts/FuturaMdBT-Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Futura Md BT";
+  src: url("fonts/FuturaMdBT-BoldItalic.ttf") format("truetype");
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+
+:root {
+  /* ============================================================
+     COLOR — BRAND
+     The signature is a purple→magenta gradient (logo sequences 1 & 3).
+     A warm orange→yellow gradient (sequence 2) is the secondary.
+     ============================================================ */
+
+  /* Primary brand stops (from the manual, exact HEX) */
+  --f03-roxo:    #432985;  /* purple   — gradient start  (RGB 61 41 133) */
+  --f03-violeta: #4C4196;  /* violet   — gradient midtone (RGB 76 65 150) */
+  --f03-magenta: #B0234D;  /* magenta  — gradient end    (RGB 176 35 77) */
+
+  /* Logo manual gradient sequence 2 (orange→yellow). NOT used in brand
+     applications per client direction — documented for reference only. */
+  --f03-laranja-escuro: #C03B17;
+  --f03-laranja-claro:  #E65D0E;
+  --f03-amarelo:        #F6DD00;
+
+  /* Signature gradients (the brand uses ONLY the purple→magenta family) */
+  --grad-brand:  linear-gradient(135deg, #432985 0%, #4C4196 38%, #B0234D 100%);
+  --grad-brand-v: linear-gradient(180deg, #432985 0%, #4C4196 45%, #B0234D 100%);
+  /* For text fills */
+  --grad-brand-text: linear-gradient(100deg, #4C4196 0%, #7A2E84 50%, #B0234D 100%);
+
+  /* ============================================================
+     COLOR — NEUTRALS  (subtly purple-tinted, for cohesion)
+     ============================================================ */
+  --f03-ink:     #14101C;  /* near-black, the deep base   */
+  --f03-ink-2:   #1E1828;  /* raised surface on dark      */
+  --f03-ink-3:   #2A2336;  /* hairline / border on dark   */
+  --f03-graphite:#3D3548;  /* muted text on dark          */
+
+  --f03-white:   #FFFFFF;
+  --f03-paper:   #F7F5FA;  /* off-white page bg (cool)    */
+  --f03-mist:    #EFECF3;  /* card bg / fill on light     */
+  --f03-line:    #E2DDEA;  /* hairline / border on light  */
+  --f03-stone:   #9A93A8;  /* muted text on light         */
+  --f03-slate:   #5B5468;  /* secondary text on light     */
+
+  /* ============================================================
+     SEMANTIC — LIGHT THEME (default)
+     ============================================================ */
+  --bg:          var(--f03-paper);
+  --bg-elevated: var(--f03-white);
+  --surface:     var(--f03-mist);
+  --border:      var(--f03-line);
+  --fg1:         var(--f03-ink);     /* primary text   */
+  --fg2:         var(--f03-slate);   /* secondary text */
+  --fg3:         var(--f03-stone);   /* tertiary/muted */
+  --accent:      var(--f03-magenta);
+  --accent-2:    var(--f03-roxo);
+  --on-accent:   var(--f03-white);
+  --focus-ring:  color-mix(in srgb, var(--f03-violeta) 55%, transparent);
+
+  /* Status (derived to harmonize with the purple system) */
+  --ok:    #2E8B6F;
+  --warn:  #E65D0E;
+  --error: #B0234D;
+  --info:  #4C4196;
+
+  /* ============================================================
+     TYPE — FAMILIES
+     ============================================================ */
+  --font-title: "Lemon Milk", "Arial Narrow", sans-serif; /* ALL CAPS */
+  --font-body:  "Futura Bk BT", "Futura", "Century Gothic", sans-serif;
+  --font-sub:   "Futura Md BT", "Futura", "Century Gothic", sans-serif;
+  /* Editable-doc fallbacks (PowerPoint/Word per manual) */
+  --font-doc-title: "Segoe UI Black", "Segoe UI", sans-serif;
+  --font-doc-body:  "Segoe UI", sans-serif;
+
+  /* ---------- TYPE SCALE ---------- */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   22px;
+  --text-xl:   28px;
+  --text-2xl:  36px;
+  --text-3xl:  48px;
+  --text-4xl:  64px;
+  --text-5xl:  88px;
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.25;
+  --lh-body:  1.6;
+
+  /* Lemon Milk reads best with open tracking in caps */
+  --track-title: 0.04em;
+  --track-eyebrow: 0.22em;
+
+  /* ============================================================
+     SPACING / RADIUS / SHADOW / MOTION
+     ============================================================ */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --space-9: 96px; --space-10: 128px;
+
+  /* Corners are crisp — the brand is geometric. Small radii only. */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(20,16,28,.06), 0 1px 3px rgba(20,16,28,.05);
+  --shadow-md: 0 4px 12px rgba(20,16,28,.08), 0 2px 4px rgba(20,16,28,.05);
+  --shadow-lg: 0 18px 48px rgba(20,16,28,.16), 0 6px 14px rgba(20,16,28,.08);
+  --shadow-brand: 0 14px 40px rgba(67,41,133,.30);
+
+  --ease: cubic-bezier(.22,.61,.36,1);     /* gentle, confident */
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+  --dur-slow: 480ms;
+}
+
+/* ============================================================
+   SEMANTIC — DARK THEME  (the studio's natural habitat:
+   moody architectural renders, cinema-black presentations)
+   ============================================================ */
+[data-theme="dark"] {
+  --bg:          var(--f03-ink);
+  --bg-elevated: var(--f03-ink-2);
+  --surface:     var(--f03-ink-2);
+  --border:      var(--f03-ink-3);
+  --fg1:         var(--f03-white);
+  --fg2:         #C9C2D6;
+  --fg3:         #8B8398;
+  --accent:      #C8418E;     /* lifted magenta for dark contrast */
+  --accent-2:    #7E5BD0;     /* lifted violet  */
+  --on-accent:   var(--f03-white);
+}
+
+/* ============================================================
+   SEMANTIC ELEMENTS
+   ============================================================ */
+.f03-eyebrow {
+  font-family: var(--font-sub);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.f03-h1 {
+  font-family: var(--font-title); font-weight: 500;
+  font-size: clamp(40px, 6vw, var(--text-5xl));
+  line-height: var(--lh-tight); letter-spacing: var(--track-title);
+  text-transform: uppercase; color: var(--fg1); text-wrap: balance;
+}
+.f03-h2 {
+  font-family: var(--font-title); font-weight: 500;
+  font-size: clamp(30px, 4vw, var(--text-3xl));
+  line-height: var(--lh-tight); letter-spacing: var(--track-title);
+  text-transform: uppercase; color: var(--fg1); text-wrap: balance;
+}
+.f03-h3 {
+  font-family: var(--font-title); font-weight: 400;
+  font-size: var(--text-xl); line-height: var(--lh-snug);
+  letter-spacing: var(--track-title); text-transform: uppercase; color: var(--fg1);
+}
+.f03-sub {
+  font-family: var(--font-sub); font-weight: 500;
+  font-size: var(--text-md); line-height: var(--lh-snug); color: var(--fg2);
+}
+.f03-body {
+  font-family: var(--font-body); font-weight: 400;
+  font-size: var(--text-base); line-height: var(--lh-body); color: var(--fg2);
+}
+.f03-caption {
+  font-family: var(--font-sub); font-weight: 500;
+  font-size: var(--text-sm); line-height: var(--lh-snug); color: var(--fg3);
+}
+.f03-gradient-text {
+  background: var(--grad-brand-text);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
