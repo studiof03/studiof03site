@@ -40,16 +40,16 @@ const FEED = [
   { src: 'renders/play.jpg',             cat: 'commons',  name: 'Espaço Play',            r: 1.78 },
   { src: 'renders/fitness.jpg',          cat: 'commons',  name: 'Fitness',               r: 1.78 },
   { src: 'renders/rua-externa.jpg',      cat: 'facade',   name: 'Rua externa',           r: 1.60 },
-  { src: 'renders/planta-terreo.png',    cat: 'plan',     name: 'Planta — Térreo',       r: 1.0, light: true },
+  { src: 'renders/planta-terreo.png',    cat: 'plan',     name: 'Planta Térreo',       r: 1.0, light: true },
   { src: 'renders/movie-game.jpg',       cat: 'commons',  name: 'Movie & Game',          r: 1.78 },
   { src: 'renders/pub.jpg',              cat: 'commons',  name: 'Pub',                   r: 1.78 },
   { src: 'renders/aerea.jpg',            cat: 'facade',   name: 'Implantação aérea',     r: 1.78 },
-  { src: 'renders/planta-3dorm.png',     cat: 'plan',     name: 'Planta — 3 dormitórios', r: 1.0, light: true },
+  { src: 'renders/planta-3dorm.png',     cat: 'plan',     name: 'Planta 3 dormitórios', r: 1.0, light: true },
   { src: 'renders/jogos.jpg',            cat: 'commons',  name: 'Sala de Jogos',         r: 1.78 },
   { src: 'renders/parque-externo.jpg',   cat: 'commons',  name: 'Parque',                r: 1.78 },
   { src: 'renders/ciclovia.jpg',         cat: 'facade',   name: 'Boulevard & ciclovia',  r: 1.78 },
-  { src: 'renders/planta-suite2.png',    cat: 'plan',     name: 'Planta — Suíte + 2',     r: 1.0, light: true },
-  { src: 'renders/planta-cobertura.png', cat: 'plan',     name: 'Planta — Cobertura',     r: 1.0, light: true },
+  { src: 'renders/planta-suite2.png',    cat: 'plan',     name: 'Planta Suíte + 2',     r: 1.0, light: true },
+  { src: 'renders/planta-cobertura.png', cat: 'plan',     name: 'Planta Cobertura',     r: 1.0, light: true },
 ];
 
 const PROJECT_I18N = {
@@ -84,7 +84,7 @@ const DICT = {
     clients: { label: 'Conheça quem confia em nós.' },
     services: {
       eyebrow: 'O que fazemos', title: 'Do briefing ao lançamento, produto por produto',
-      desc: 'Cada peça é produzida para potencializar a venda do seu empreendimento — com precisão técnica e direção de arte.',
+      desc: 'Cada peça é produzida para potencializar a venda do seu empreendimento, unindo precisão técnica e direção de arte.',
       items: [
         { icon: 'image', title: 'Imagens 3D', desc: 'Renders fotorrealistas de fachadas, interiores e áreas comuns para materiais de venda.', list: ['Fachadas & implantação', 'Interiores decorados', 'Áreas comuns & lazer'] },
         { icon: 'clapperboard', title: 'Animações', desc: 'Vídeos que percorrem o empreendimento e a vizinhança, contando a história do projeto.', list: ['Vídeos aéreos', 'Walkthroughs internos', 'Teaser de lançamento'] },
@@ -108,14 +108,14 @@ const DICT = {
     },
     about: {
       eyebrow: 'O estúdio', title: 'Um ponto de partida que virou movimento',
-      p1: 'A F03 nasceu de um endereço — um ponto cartográfico de partida. Há mais de 4 anos transformamos projetos em imagens que ajudam incorporadoras e construtoras a vender antes da obra começar.',
+      p1: 'A F03 nasceu de um endereço, um ponto cartográfico de partida. Há mais de 4 anos transformamos projetos em imagens que ajudam incorporadoras e construtoras a vender antes da obra começar.',
       p2: 'Trabalhamos lado a lado com arquitetos e equipes de marketing, unindo precisão técnica e direção de arte para traduzir cada empreendimento na sua melhor luz.',
       quote: '“Imagens que dão forma ao que ainda vai existir.”',
       name: 'Vitor Rodrigues', role: 'Fundador · STUDIO F03',
     },
     tour: {
       eyebrow: 'Experiência 360°', title: 'Visite o empreendimento antes da entrega',
-      desc: 'Explore os ambientes em 360° direto do navegador. Clique e arraste dentro do tour para olhar ao redor — a mesma experiência que o comprador tem no anúncio ou no stand de vendas.',
+      desc: 'Explore os ambientes em 360° direto do navegador. Clique e arraste dentro do tour para olhar ao redor, com a mesma experiência que o comprador tem no anúncio ou no stand de vendas.',
       hint: 'Clique e arraste para olhar ao redor', scenes: ['ILHA DE MALLORCA', 'CANONGE'],
     },
     cta: { title: 'Vamos dar o primeiro passo?', quote: 'Solicitar orçamento' },
@@ -141,7 +141,7 @@ const DICT = {
     clients: { label: 'Meet who trusts us.' },
     services: {
       eyebrow: 'What we do', title: 'From brief to launch, product by product',
-      desc: 'Every piece is produced to drive the sale of your development — with technical precision and art direction.',
+      desc: 'Every piece is produced to drive the sale of your development, combining technical precision and art direction.',
       items: [
         { icon: 'image', title: '3D Stills', desc: 'Photoreal renders of façades, interiors and amenities for your sales materials.', list: ['Façades & siteplan', 'Furnished interiors', 'Amenities & leisure'] },
         { icon: 'clapperboard', title: 'Animations', desc: 'Films that move through the development and its surroundings, telling the project\u2019s story.', list: ['Aerial films', 'Interior walkthroughs', 'Launch teaser'] },
@@ -165,14 +165,14 @@ const DICT = {
     },
     about: {
       eyebrow: 'The studio', title: 'A starting point that became movement',
-      p1: 'F03 was born from an address — a cartographic starting point. For over 4 years we have turned projects into images that help developers and builders sell before the ground breaks.',
+      p1: 'F03 was born from an address, a cartographic starting point. For over 4 years we have turned projects into images that help developers and builders sell before the ground breaks.',
       p2: 'We work side by side with architects and marketing teams, combining technical precision and art direction to render each development in its best light.',
       quote: '“Images that give form to what doesn\u2019t exist yet.”',
       name: 'Vitor Rodrigues', role: 'Founder · STUDIO F03',
     },
     tour: {
       eyebrow: '360° Experience', title: 'Visit the development before handover',
-      desc: 'Explore the spaces in 360° straight from the browser. Click and drag inside the tour to look around — the same experience buyers get from the listing or the sales stand.',
+      desc: 'Explore the spaces in 360° straight from the browser. Click and drag inside the tour to look around, the same experience buyers get from the listing or the sales stand.',
       hint: 'Click and drag to look around', scenes: ['ILHA DE MALLORCA', 'CANONGE'],
     },
     cta: { title: 'Shall we take the first step?', quote: 'Request a quote' },
